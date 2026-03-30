@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Noto Serif", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  
+  --color-bg: #fef8f2;
+  --color-ink: #1d1b18;
+  --color-primary: #715a4c;
+  --color-secondary: #6b5b4f;
+  --color-tertiary: #735b25;
+  --color-surface: #ffffff;
+  --color-surface-low: #f9f3ed;
+  --color-surface-high: #ede7e1;
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg text-ink font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .glass-nav {
+    @apply bg-white/80 backdrop-blur-md;
+  }
+  
+  .gradient-cta {
+    background: linear-gradient(45deg, #715a4c, #e3c5b5);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
