@@ -3,7 +3,7 @@ import { DEFAULT_META_DESCRIPTION, SITE_BRAND, SITE_TAGLINE } from './seo';
 
 export function useDocumentMeta() {
   useEffect(() => {
-    const title = `${SITE_BRAND} | ${SITE_TAGLINE} · ร้านทำเล็บอุดรธานี เล็บเจล ต่อเล็บ`;
+    const title = `${SITE_BRAND} | ${SITE_TAGLINE} · ทำเล็บอุดร ร้านทำเล็บอุดรธานี เล็บเจล`;
     document.title = title;
 
     const ensureMeta = (name: string, content: string, attr: 'name' | 'property' = 'name') => {

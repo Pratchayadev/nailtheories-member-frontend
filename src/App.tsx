@@ -14,7 +14,6 @@ import {
   Phone, 
   Instagram, 
   Facebook, 
-  MessageCircle,
   Brush,
   Layers,
   Palette,
@@ -31,8 +30,25 @@ import {
   ChevronRight
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { SEO_SECONDARY_KEYWORDS, SITE_TAGLINE } from './seo';
+import {
+  CONTACT,
+  getGoogleMapsEmbedSrc,
+  SEO_ALL_TAGS,
+  SEO_KEYWORDS_LOCAL,
+  SEO_KEYWORDS_NICHE,
+  SEO_KEYWORDS_PRIMARY,
+  SEO_KEYWORDS_SERVICE,
+  SITE_TAGLINE,
+} from './seo';
 import { useDocumentMeta } from './useDocumentMeta';
+
+function TikTokIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+    </svg>
+  );
+}
 
 // --- Data ---
 
@@ -163,11 +179,12 @@ const Hero = () => {
             {SITE_TAGLINE} · อุดรธานี
           </p>
           <h1 className="text-5xl md:text-7xl font-serif font-bold leading-tight text-primary mb-6 -tracking-tight">
-            ร้านเล็บอุดรธานี<br/>
+            ทำเล็บอุดร · ร้านทำเล็บอุดรธานี<br/>
             <span className="italic font-normal text-ink/80">ร้านทำเล็บอุดร สไตล์สตูดิโอที่บ้าน</span>
           </h1>
           <p className="text-lg text-ink/60 mb-10 max-w-lg leading-relaxed">
-            Nail Theories คือ <strong className="font-semibold text-ink/75">ร้านทำเล็บอุดรธานี</strong> แบบ{' '}
+            Nail Theories คือ <strong className="font-semibold text-ink/75">ร้านทำเล็บอุดรธานี</strong> สำหรับคนที่ค้นหา <strong className="font-semibold text-ink/75">ทำเล็บอุดร</strong> หรือ{' '}
+            <strong className="font-semibold text-ink/75">ทำเล็บเจล อุดร</strong> แบบ{' '}
             <strong className="font-semibold text-ink/75">{SITE_TAGLINE}</strong> — โฟกัสงานละเอียด สะอาด และบรรยากาศอบอุ่นเหมือนมาทำเล็บที่บ้านเพื่อน
             ครอบคลุม <strong className="font-semibold text-ink/75">เล็บเจลอุดร</strong> <strong className="font-semibold text-ink/75">ต่อเล็บอุดร</strong> และ{' '}
             <strong className="font-semibold text-ink/75">เพ้นท์เล็บอุดร</strong> ในโทน <strong className="font-semibold text-ink/75">ร้านทำเล็บมินิมอลอุดร</strong> ที่ถ่ายรูปขึ้น
@@ -192,16 +209,19 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="lg:col-span-6 relative h-[500px] md:h-[600px] w-full"
+          className="lg:col-span-6 relative w-full"
         >
           <div className="absolute inset-0 bg-primary/10 rounded-full blur-3xl -z-10 animate-pulse"></div>
-          <img 
-            alt="เล็บเจลอุดร ร้านทำเล็บอุดรธานี Nail Theories Home Studio Nail Labs" 
-            className="w-full h-full object-cover rounded-3xl shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700" 
-            src="https://picsum.photos/seed/nails1/800/1000"
-            referrerPolicy="no-referrer"
-          />
-          <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl max-w-[220px] border border-surface-high">
+          <div className="relative overflow-hidden rounded-3xl border border-ink/5 bg-surface-low shadow-2xl aspect-[16/10] max-h-[min(520px,55vh)] w-full">
+            <img 
+              alt="Nail Theories ร้านทำเล็บอุดรธานี Home Studio Nail Labs — แบนเนอร์แบรนด์" 
+              className="h-full w-full object-contain object-center transition-transform duration-700 hover:scale-[1.01]" 
+              src="/images/hero-nail-theories.png"
+              decoding="async"
+              fetchPriority="high"
+            />
+          </div>
+          <div className="absolute -bottom-4 left-0 md:-bottom-6 md:-left-4 bg-white p-5 md:p-6 rounded-2xl shadow-xl max-w-[220px] border border-surface-high">
             <p className="text-[10px] uppercase tracking-tighter text-ink/40 mb-2 font-bold">Home Lab</p>
             <p className="font-serif italic text-primary text-lg">ร้านเล็บเจลอุดรธานี · มินิมอล</p>
           </div>
@@ -217,28 +237,73 @@ const LocalSeoSection = () => (
     aria-labelledby="local-seo-heading"
     className="scroll-mt-24 border-y border-ink/5 bg-white py-24 px-8"
   >
-    <div className="mx-auto max-w-3xl">
-      <h2 id="local-seo-heading" className="mb-8 text-center font-serif text-2xl text-ink md:text-3xl">
-        ร้านทำเล็บอุดร · ร้านทำเล็บอุดรธานี — เล็บเจล ต่อเล็บ เพ้นท์เล็บ
+    <div className="mx-auto max-w-3xl lg:max-w-4xl">
+      <p className="mb-3 text-center text-[10px] font-bold uppercase tracking-[0.35em] text-ink/40">
+        Local SEO · อุดรธานี
+      </p>
+      <h2 id="local-seo-heading" className="mb-4 text-center font-serif text-2xl text-ink md:text-3xl">
+        {SEO_KEYWORDS_PRIMARY[0]} · {SEO_KEYWORDS_PRIMARY[1]} — ค้นหาเราได้หลายแบบ
       </h2>
-      <article className="space-y-6 text-base leading-relaxed text-ink/65">
-        <p>
-          หากคุณกำลังมองหา <strong className="font-semibold text-ink/80">ร้านทำเล็บอุดร</strong> หรือ{' '}
-          <strong className="font-semibold text-ink/80">ร้านทำเล็บอุดรธานี</strong> ที่เน้นงานละเอียดและบรรยากาศอบอุ่น
-          Nail Theories ทำงานในรูปแบบ <strong className="font-semibold text-ink/80">{SITE_TAGLINE}</strong> — โฟกัสคุณภาพและความสะอาด
-          พร้อมบริการ <strong className="font-semibold text-ink/80">เล็บเจลอุดร</strong> ครบทั้งทาสี แก้ทรง และโทนมินิมอลที่ถ่ายรูปขึ้น
-        </p>
-        <p>
-          งานโครงสร้างและดีไซน์ครอบคลุม <strong className="font-semibold text-ink/80">ต่อเล็บอุดร</strong> แบบนุ่ม เป็นธรรมชาติ
-          ไปจนถึง <strong className="font-semibold text-ink/80">เพ้นท์เล็บอุดร</strong> ลายเส้น โอมเบร และลายเทรนด์เบาๆ
-          ให้ลุคที่เข้ากับ <strong className="font-semibold text-ink/80">ร้านทำเล็บมินิมอลอุดร</strong> และไลฟ์สไตล์ทำงาน/ใช้ชีวิตประจำวัน
-        </p>
-        <p>
-          คนหลายคนค้นหา <strong className="font-semibold text-ink/80">ร้านทำเล็บใกล้ฉัน</strong> หรือ{' '}
-          <strong className="font-semibold text-ink/80">ร้านทำเล็บสวยๆ อุดร</strong> — เราจัดตารางแบบจองคิวชัดเจน
-          เพื่อให้คุณได้รับบริการแบบไม่เร่งรีด เหมาะกับผู้ที่ต้องการ <strong className="font-semibold text-ink/80">ร้านเล็บเจลอุดรธานี</strong> ที่ใส่ใจสุขอนามัยและรายละเอียดจริงๆ
-        </p>
+      <p className="mx-auto mb-12 max-w-2xl text-center text-sm leading-relaxed text-ink/50">
+        คนส่วนใหญ่ในอุดรจะใส่ชื่อจังหวัด แลนด์มาร์ค หรือคำว่า “ใกล้ฉัน” เพื่อหาร้านที่เดินทางสะดวก — ด้านล่างคือแนวคำค้นที่เราออกแบบเนื้อหาให้ครอบคลุม
+      </p>
+
+      <article className="space-y-10 text-base leading-relaxed text-ink/65">
+        <div>
+          <h3 className="mb-4 font-serif text-lg font-semibold text-ink md:text-xl">
+            1. พื้นที่ &amp; ละแวกในเมือง
+          </h3>
+          <p>
+            คีย์เวิร์ดหลักคือ <strong className="font-semibold text-ink/80">{SEO_KEYWORDS_PRIMARY[0]}</strong> และ{' '}
+            <strong className="font-semibold text-ink/80">{SEO_KEYWORDS_PRIMARY[1]}</strong> — คนที่เปิด Google มักต้องการร้านในเมืองหรือใกล้บ้าน
+            หลายคนพิมพ์ <strong className="font-semibold text-ink/80">ร้านทำเล็บใกล้ฉัน</strong> เพื่อให้ระบบดึงผลจากตำแหน่งปัจจุบัน
+            นอกจากนี้ยังมีคนค้นหา <strong className="font-semibold text-ink/80">ทำเล็บเจล อุดร</strong> โดยตรง
+            หรือระบุย่าน เช่น <strong className="font-semibold text-ink/80">ร้านทำเล็บแถวห้าแยกน้ำพุ</strong> <strong className="font-semibold text-ink/80">ร้านทำเล็บแถวยูดีทาวน์</strong> และ{' '}
+            <strong className="font-semibold text-ink/80">ร้านทำเล็บหน้าเซ็นทรัลอุดร</strong> — Nail Theories ตั้งอยู่ใกล้จุดเดินทางหลักในเมือง สอบถามพิกัดและเวลาเปิด-ปิดได้ก่อนมาค่ะ
+          </p>
+        </div>
+
+        <div>
+          <h3 className="mb-4 font-serif text-lg font-semibold text-ink md:text-xl">
+            2. รูปแบบบริการ &amp; ความสะดวก
+          </h3>
+          <p>
+            สำหรับลูกค้าที่ต้องการความยืดหยุ่น คำค้นอย่าง <strong className="font-semibold text-ink/80">ทำเล็บนอกสถานที่ อุดร</strong> <strong className="font-semibold text-ink/80">ทำเล็บเดลิเวอรี่</strong> หรือ{' '}
+            <strong className="font-semibold text-ink/80">Private Nail Studio อุดร</strong> จะช่วยคัดกรองกลุ่มที่ชอบความเป็นส่วนตัวและนัดล่วงหน้า
+            เราเน้น <strong className="font-semibold text-ink/80">จองคิวทำเล็บออนไลน์</strong> ผ่านโซเชียล/โทร เพื่อจัดคิวไม่แออัดในแนว{' '}
+            <strong className="font-semibold text-ink/80">{SITE_TAGLINE}</strong> — สอบถามเงื่อนไขบริการนอกสถานที่และค่าเดินทางได้ก่อนจองค่ะ
+          </p>
+        </div>
+
+        <div>
+          <h3 className="mb-4 font-serif text-lg font-semibold text-ink md:text-xl">
+            3. โจทย์เฉพาะ (long-tail)
+          </h3>
+          <p>
+            คำค้นยาวอย่าง <strong className="font-semibold text-ink/80">ต่อเล็บ PVC อุดร ราคาถูก</strong> <strong className="font-semibold text-ink/80">สปามือเท้า อุดรธานี</strong> หรือ{' '}
+            <strong className="font-semibold text-ink/80">ลายเล็บเจลเรียบหรู</strong> <strong className="font-semibold text-ink/80">ทำเล็บเจ้าสาว อุดร</strong> อาจมีปริมาณค้นหาน้อยกว่าคำหลัก แต่ลูกค้ามักพร้อมจองเมื่อเจอร้านที่ตอบโจทย์
+            บน TikTok หรือ Lemon8 คำว่า <strong className="font-semibold text-ink/80">พิกัดร้านทำเล็บอุดร</strong> ก็ถูกใช้บ่อย — ติดตามพิกัดและผลงานล่าสุดได้ที่ช่องโซเชียลของเรา
+          </p>
+        </div>
       </article>
+
+      <div className="mt-12 rounded-2xl border border-ink/5 bg-surface-low p-6">
+        <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.25em] text-ink/40">สรุปคีย์เวิร์ดตามกลุ่ม</p>
+        <ul className="grid gap-4 text-sm text-ink/60 sm:grid-cols-3">
+          <li>
+            <span className="mb-2 block font-semibold text-ink/80">พื้นที่</span>
+            <span className="leading-relaxed">{SEO_KEYWORDS_LOCAL.join(' · ')}</span>
+          </li>
+          <li>
+            <span className="mb-2 block font-semibold text-ink/80">บริการ</span>
+            <span className="leading-relaxed">{SEO_KEYWORDS_SERVICE.join(' · ')}</span>
+          </li>
+          <li>
+            <span className="mb-2 block font-semibold text-ink/80">เฉพาะทาง</span>
+            <span className="leading-relaxed">{SEO_KEYWORDS_NICHE.join(' · ')}</span>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 );
@@ -483,7 +548,7 @@ const FAQ = () => {
   const faqs = [
     {
       q: "ร้านทำเล็บอุดรธานี Nail Theories ตั้งอยู่ที่ไหน?",
-      a: "เราให้บริการในรูปแบบ Home Studio Nail Labs ตั้งอยู่ใจกลางเมืองอุดรธานี บริเวณถนนประจักษ์ศิลปาคม ใกล้ UD Town และเซ็นทรัลอุดรธานี เดินทางสะดวก เหมาะกับคนที่ค้นหาร้านทำเล็บอุดรหรือร้านทำเล็บใกล้ฉันในโซนเมืองค่ะ"
+      a: "เราให้บริการในรูปแบบ Home Studio Nail Labs ที่ 152 ซอย ศรีพินิจ 3 ตำบลหมากแข้ง เมือง อุดรธานี 41000 — ดูเส้นทางและพิกัดได้จากปุ่ม “เปิดใน Google Maps” ในหน้าติดต่อค่ะ เหมาะกับคนที่ค้นหาร้านทำเล็บอุดรหรือร้านทำเล็บใกล้ฉันในโซนเมืองค่ะ"
     },
     {
       q: "เล็บเจลอุดรอยู่ได้นานแค่ไหน?",
@@ -504,6 +569,22 @@ const FAQ = () => {
     {
       q: "ราคาเริ่มต้นประมาณเท่าไหร่?",
       a: "บริการทาสีเจลพื้นฐานเริ่มต้นที่ 3xx บาท (แล้วแต่โปรโมชัน/ความยาวเล็บ) โดยใช้ผลิตภัณฑ์คุณภาพทุกขั้นตอน สำหรับงานอาร์ตหรืองานต่อเล็บอุดร ราคาจะขึ้นกับความซับซ้อนของลายและวัสดุค่ะ"
+    },
+    {
+      q: "จองคิวทำเล็บออนไลน์ทำอย่างไร?",
+      a: "จองผ่าน Facebook / Instagram / โทร หรือแชท Line ของร้านได้ค่ะ แจ้งวันที่ เวลา และบริการที่ต้องการ (เช่น เล็บเจล ต่อเล็บ หรือทำเล็บเจ้าสาว อุดร) เราจะยืนยันคิวกลับให้ — เหมาะกับคนที่ค้นหา “จองคิวทำเล็บออนไลน์” และไม่สะดวกเดินเข้าร้านก่อนโดยไม่มีนัดค่ะ"
+    },
+    {
+      q: "มีบริการทำเล็บนอกสถานที่หรือเดลิเวอรี่ไหม?",
+      a: "มีบริการตามเงื่อนไขและคิวช่างค่ะ — เหมาะกับคนที่ค้นหา “ทำเล็บนอกสถานที่ อุดร” หรือ “ทำเล็บเดลิเวอรี่” กรุณาสอบถามระยะทาง ค่าเดินทาง และช่วงเวลาที่ว่างล่วงหน้า เราจะยืนยันให้ตรงกับรูปแบบ Private Nail Studio อุดรที่โฟกัสงานละเอียดค่ะ"
+    },
+    {
+      q: "ต่อเล็บ PVC อุดร ราคาถูกเริ่มประมาณเท่าไหร่?",
+      a: "ราคาขึ้นกับความยาว ทรง และดีไซน์ค่ะ — แนะนำส่งรูปอ้างอิง/สอบถามทาง Inbox เพื่อประเมินก่อนจอง เราใช้วัสดุคุณภาพและเน้นความปลอดภัยของหน้าเล็บ ไม่เน้นแข่งราคาเพียงอย่างเดียวแต่เน้นคุ้มกับงานที่ได้ค่ะ"
+    },
+    {
+      q: "ขอพิกัดร้านทำเล็บอุดรและที่จอดรถ?",
+      a: "ติดต่อขอพิกัดล่าสุดและแผนที่ได้ทางโทรหรือโซเชียลค่ะ — เหมาะกับคนที่ค้นหา “พิกัดร้านทำเล็บอุดร” บน TikTok หรือ Lemon8 เราอยู่ใกล้แหล่งท่องเที่ยวในเมือง เดินทางจากยูดีทาวน์หรือเซ็นทรัลอุดรได้สะดวก (แล้วแต่เส้นทาง) กรุณาสอบถามที่จอดก่อนมาค่ะ"
     }
   ];
 
@@ -553,12 +634,34 @@ const Footer = () => {
           <p className="text-ink/60 max-w-sm mb-8 leading-relaxed">
             ร้านทำเล็บอุดรธานีแบบ Home Studio Nail Labs — เน้นเล็บเจลอุดร ต่อเล็บอุดร เพ้นท์เล็บอุดร และโทนร้านทำเล็บมินิมอลอุดรที่สะอาดและละเอียด
           </p>
-          <div className="flex gap-4">
-            {[Instagram, Facebook, MessageCircle].map((Icon, i) => (
-              <a key={i} href="#" className="w-10 h-10 rounded-full border border-ink/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-primary">
-                <Icon className="w-4 h-4" />
-              </a>
-            ))}
+          <div className="flex flex-wrap gap-3">
+            <a
+              href={CONTACT.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-ink/10 text-primary transition-all hover:bg-primary hover:text-white"
+              aria-label="Instagram — @nailtheories"
+            >
+              <Instagram className="h-4 w-4" />
+            </a>
+            <a
+              href={CONTACT.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-ink/10 text-primary transition-all hover:bg-primary hover:text-white"
+              aria-label="Facebook — Nail Theories Udon Thani"
+            >
+              <Facebook className="h-4 w-4" />
+            </a>
+            <a
+              href={CONTACT.tiktok}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-ink/10 text-primary transition-all hover:bg-primary hover:text-white"
+              aria-label="TikTok — @nail.theories"
+            >
+              <TikTokIcon className="h-4 w-4" />
+            </a>
           </div>
         </div>
         
@@ -575,9 +678,25 @@ const Footer = () => {
         <div>
           <h4 className="font-bold text-xs uppercase tracking-widest mb-6">Contact</h4>
           <div className="space-y-4 text-sm text-ink/60">
-            <p>Udon Thani, Thailand</p>
-            <p>hello@nailtheories.com</p>
-            <p>+66 8x-xxx-xxxx</p>
+            <p className="max-w-xs leading-relaxed">{CONTACT.addressLine}</p>
+            <p>
+              <a href={CONTACT.phoneTel} className="font-medium text-ink hover:text-primary transition-colors">
+                {CONTACT.phoneDisplay}
+              </a>
+            </p>
+            <p className="text-xs leading-relaxed">
+              <a href={CONTACT.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-primary">
+                Facebook
+              </a>
+              {' · '}
+              <a href={CONTACT.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-primary">
+                Instagram
+              </a>
+              {' · '}
+              <a href={CONTACT.tiktok} target="_blank" rel="noopener noreferrer" className="hover:text-primary">
+                TikTok
+              </a>
+            </p>
           </div>
         </div>
       </div>
@@ -723,7 +842,7 @@ export default function App() {
               <div className="space-y-6 mb-12">
                 <div className="flex gap-4">
                   <MapPin className="w-5 h-5 text-primary shrink-0" />
-                  <p className="text-ink/60 text-sm">123 ถนนประจักษ์ศิลปาคม ต.หมากแข้ง อ.เมือง จ.อุดรธานี 41000</p>
+                  <p className="text-ink/60 text-sm">{CONTACT.addressLine}</p>
                 </div>
                 <div className="flex gap-4">
                   <Clock className="w-5 h-5 text-primary shrink-0" />
@@ -731,13 +850,58 @@ export default function App() {
                 </div>
                 <div className="flex gap-4">
                   <Phone className="w-5 h-5 text-primary shrink-0" />
-                  <p className="text-ink/60 text-sm">08x-xxx-xxxx</p>
+                  <p className="text-ink/60 text-sm">
+                    <a
+                      href={CONTACT.phoneTel}
+                      className="font-semibold text-ink hover:text-primary transition-colors"
+                    >
+                      {CONTACT.phoneDisplay}
+                    </a>
+                    <span className="block text-xs font-normal text-ink/45 mt-1">โทรจองคิว / สอบถามเวลา</span>
+                  </p>
                 </div>
               </div>
+
+              <div className="mb-12">
+                <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-ink/40 mb-4">จองหรือติดตาม</p>
+                <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+                  <a
+                    href={CONTACT.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 rounded-2xl border border-ink/10 bg-white px-5 py-3 text-sm font-semibold text-ink shadow-sm transition hover:border-primary/30 hover:bg-surface-low"
+                  >
+                    <Facebook className="h-4 w-4 text-primary shrink-0" />
+                    Facebook
+                    <ExternalLink className="h-3.5 w-3.5 text-ink/35" />
+                  </a>
+                  <a
+                    href={CONTACT.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 rounded-2xl border border-ink/10 bg-white px-5 py-3 text-sm font-semibold text-ink shadow-sm transition hover:border-primary/30 hover:bg-surface-low"
+                  >
+                    <Instagram className="h-4 w-4 text-primary shrink-0" />
+                    Instagram
+                    <ExternalLink className="h-3.5 w-3.5 text-ink/35" />
+                  </a>
+                  <a
+                    href={CONTACT.tiktok}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 rounded-2xl border border-ink/10 bg-white px-5 py-3 text-sm font-semibold text-ink shadow-sm transition hover:border-primary/30 hover:bg-surface-low"
+                  >
+                    <TikTokIcon className="h-4 w-4 text-primary shrink-0" />
+                    TikTok
+                    <ExternalLink className="h-3.5 w-3.5 text-ink/35" />
+                  </a>
+                </div>
+              </div>
+
               <div className="p-8 bg-surface-low rounded-3xl">
                 <h4 className="font-bold mb-4 uppercase tracking-widest text-[10px] text-ink/40">คำค้นยอดนิยม (อุดรธานี)</h4>
                 <div className="flex flex-wrap gap-2">
-                  {SEO_SECONDARY_KEYWORDS.map((tag) => (
+                  {SEO_ALL_TAGS.map((tag) => (
                     <span key={tag} className="px-3 py-1 bg-white rounded-full text-[10px] text-ink/60 border border-ink/5 font-medium">
                       {tag}
                     </span>
@@ -745,23 +909,27 @@ export default function App() {
                 </div>
               </div>
             </div>
-            <div className="h-[500px] bg-surface-high rounded-[40px] overflow-hidden relative shadow-2xl group">
-              <img 
-                className="w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" 
-                src="https://picsum.photos/seed/map/800/800" 
-                alt="Location Map"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="bg-white px-8 py-6 rounded-3xl shadow-2xl text-center border border-primary/10 pointer-events-auto">
-                  <MapPin className="w-8 h-8 text-primary mx-auto mb-2" />
-                  <p className="font-serif text-lg font-bold">Nail Theories</p>
-                  <p className="text-[10px] text-ink/40 uppercase tracking-widest mt-1 font-bold">{SITE_TAGLINE}</p>
-                  <button className="mt-4 text-[9px] font-bold text-tertiary uppercase tracking-[0.2em] border border-tertiary/20 px-6 py-2.5 rounded-full hover:bg-tertiary hover:text-white transition-all">
-                    Open in Google Maps
-                  </button>
-                </div>
+            <div className="flex w-full flex-col gap-4">
+              <div className="relative min-h-[320px] w-full overflow-hidden rounded-[40px] border border-ink/5 bg-surface-high shadow-2xl lg:min-h-[420px]">
+                <iframe
+                  title="แผนที่ Nail Theories — 152 ซอย ศรีพินิจ 3 อุดรธานี"
+                  src={getGoogleMapsEmbedSrc()}
+                  className="absolute inset-0 h-full w-full border-0"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                />
               </div>
+              <a
+                href={CONTACT.googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-primary px-6 py-4 text-center text-sm font-bold tracking-wide text-white shadow-lg shadow-primary/20 transition hover:bg-primary/90 sm:w-auto sm:self-end"
+              >
+                <MapPin className="h-4 w-4 shrink-0" />
+                เปิดใน Google Maps
+                <ExternalLink className="h-4 w-4 shrink-0 opacity-80" />
+              </a>
             </div>
           </div>
         </section>
