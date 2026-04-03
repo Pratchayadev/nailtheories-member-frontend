@@ -59,6 +59,16 @@ export const SEO_SECONDARY_KEYWORDS = SEO_ALL_TAGS;
 export const SITE_BRAND = 'Nail Theories';
 export const SITE_TAGLINE = 'Home Studio Nail Labs';
 
+/** โดเมนหลัก — ใช้กับ og:image / og:url (ต้องเป็น URL แบบเต็ม) */
+export const SITE_URL = 'https://www.nail-theories.com';
+
+/** รูป OG / แชร์โซเชียล (ไฟล์ใน public/) */
+export const OG_IMAGE_PATH = '/images/hero-nail-theories.png';
+
+export function getOgImageAbsoluteUrl(): string {
+  return `${SITE_URL}${OG_IMAGE_PATH}`;
+}
+
 export const DEFAULT_META_DESCRIPTION =
   'ทำเล็บอุดร ร้านทำเล็บอุดรธานี Nail Theories — Home Studio / Private Nail Studio อุดร ทำเล็บเจล อุดร จองคิวทำเล็บออนไลน์ ร้านทำเล็บใกล้ฉัน แถวยูดีทาวน์ ห้าแยกน้ำพุ เซ็นทรัลอุดร';
 
