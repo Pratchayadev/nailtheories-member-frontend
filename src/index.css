@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   /* บังคับทั้ง sans/serif ให้เป็น Kanit — ไม่ให้ภาษาไทยตกไปใช้ Georgia / ฟอนต์ระบบจากคลาส font-serif */

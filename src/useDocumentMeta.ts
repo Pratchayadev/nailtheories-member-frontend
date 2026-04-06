@@ -36,3 +36,37 @@ export function useDocumentMeta() {
     ensureMeta('twitter:image:alt', `${SITE_BRAND} — ${SITE_TAGLINE} ร้านทำเล็บอุดรธานี`);
   }, []);
 }
+
+export function useBlogPostMeta(opts: {
+  title: string;
+  description: string;
+  slug: string;
+}) {
+  useEffect(() => {
+    document.title = opts.title;
+
+    const ensureMeta = (name: string, content: string, attr: 'name' | 'property' = 'name') => {
+      let el = document.querySelector(`meta[${attr}="${name}"]`);
+      if (!el) {
+        el = document.createElement('meta');
+        el.setAttribute(attr, name);
+        document.head.appendChild(el);
+      }
+      el.setAttribute('content', content);
+    };
+
+    const ogImage = getOgImageAbsoluteUrl();
+    const desc = opts.description || DEFAULT_META_DESCRIPTION;
+
+    ensureMeta('description', desc);
+    ensureMeta('og:title', opts.title, 'property');
+    ensureMeta('og:description', desc, 'property');
+    ensureMeta('og:type', 'article', 'property');
+    ensureMeta('og:url', `${SITE_URL}/blog/${opts.slug}`, 'property');
+    ensureMeta('og:image', ogImage, 'property');
+    ensureMeta('og:image:alt', `${SITE_BRAND} — ${opts.title}`, 'property');
+    ensureMeta('twitter:card', 'summary_large_image');
+    ensureMeta('twitter:image', ogImage);
+    ensureMeta('twitter:image:alt', `${SITE_BRAND} — ${opts.title}`, 'property');
+  }, [opts.title, opts.description, opts.slug]);
+}

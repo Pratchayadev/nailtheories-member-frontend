@@ -4,6 +4,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   Menu, 
   X, 
@@ -60,70 +61,25 @@ type PortfolioItem = {
 
 const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
-    src: 'https://picsum.photos/seed/nt-port-1/900/1100',
-    alt: 'ผลงานเล็บเจลสไตล์มินิมอล Home Studio Nail Labs ร้านทำเล็บมินิมอลอุดร Nail Theories',
-    title: 'มินิมอล เล็บเจล',
+    src: '/images/portfolio/S__3022860.jpg',
+    alt: 'ผลงานเล็บเจล Nail Theories ร้านทำเล็บอุดรธานี Home Studio Nail Labs',
+    title: 'เล็บเจล · มินิมอล',
   },
   {
-    src: 'https://picsum.photos/seed/nt-port-2/900/1100',
-    alt: 'ต่อเล็บอุดร งานละเอียด ร้านทำเล็บอุดรธานี ร้านทำเล็บอุดร',
-    title: 'ต่อเล็บ Soft Gel',
+    src: '/images/portfolio/S__40558600.jpg',
+    alt: 'ผลงานทำเล็บอุดร เพ้นท์เล็บ ร้านเล็บเจลอุดรธานี',
+    title: 'เพ้นท์เล็บ / ลายสวย',
   },
   {
-    src: 'https://picsum.photos/seed/nt-port-3/900/1100',
-    alt: 'เพ้นท์เล็บอุดร ลายเกาหลี ร้านเล็บเจลอุดรธานี',
-    title: 'ลายเกาหลี',
-  },
-  {
-    src: 'https://picsum.photos/seed/nt-port-4/900/1100',
-    alt: 'เล็บเจลอุดร โทนนู้ด ร้านทำเล็บอุดรธานี ร้านทำเล็บสวยๆ อุดร',
-    title: 'โทนนู้ดเรียบหรู',
-  },
-  {
-    src: 'https://picsum.photos/seed/nt-port-5/900/1100',
-    alt: 'ร้านทำเล็บใกล้ฉัน อุดรธานี ผลงานเล็บแฟชั่น เล็บเจลอุดร',
-    title: 'แฟชั่น / ลายพิเศษ',
-  },
-  {
-    src: 'https://picsum.photos/seed/nt-port-6/900/1100',
-    alt: 'ต่อเล็บอุดร งานอีเวนต์ Home Studio Nail Labs ร้านเล็บเจลอุดรธานี',
-    title: 'หรูหรา / อีเวนต์',
-  },
-  {
-    src: 'https://picsum.photos/seed/nt-port-7/900/1100',
-    alt: 'เล็บเจลอุดร ลูกคุณหนู ร้านทำเล็บอุดร ร้านทำเล็บอุดรธานี',
-    title: 'ลูกคุณหนู',
-  },
-  {
-    src: 'https://picsum.photos/seed/nt-port-8/900/1100',
-    alt: 'ผลงานเล็บมินิมอล ร้านทำเล็บมินิมอลอุดร แนะนำ',
-    title: 'มินิมอลลายเส้น',
-  },
-  {
-    src: 'https://picsum.photos/seed/nt-port-9/900/1100',
-    alt: 'เพ้นท์เล็บอุดร ลายโอมเบร ร้านทำเล็บอุดรธานี',
-    title: 'โอมเบร / ไล่สี',
-  },
-  {
-    src: 'https://picsum.photos/seed/nt-port-10/900/1100',
-    alt: 'ร้านทำเล็บอุดรธานี เล็บเจลเงางาม ร้านทำเล็บสวยๆ อุดร',
-    title: 'กลาสสกิน / เงา',
-  },
-  {
-    src: 'https://picsum.photos/seed/nt-port-11/900/1100',
-    alt: 'ต่อเล็บอุดร สั้นธรรมชาติ ร้านเล็บเจลอุดรธานี',
-    title: 'สั้นธรรมชาติ',
-  },
-  {
-    src: 'https://picsum.photos/seed/nt-port-12/900/1100',
-    alt: 'เล็บเจลอุดร ดีไซน์พิเศษ ร้านทำเล็บใกล้ฉัน อุดรธานี',
-    title: 'ดีไซน์พิเศษ',
+    src: '/images/portfolio/port1.png',
+    alt: 'ผลงานต่อเล็บอุดร เล็บเจลอุดร ร้านทำเล็บมินิมอลอุดร',
+    title: 'ต่อเล็บ · โทนนู้ด',
   },
 ];
 
 // --- Components ---
 
-const Navbar = () => {
+export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -135,7 +91,7 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'glass-nav py-3 shadow-sm' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-8 flex justify-between items-center">
-        <a href="#" className="text-2xl font-serif italic font-bold text-primary leading-tight">
+        <a href="/" className="text-2xl font-serif italic font-bold text-primary leading-tight">
           Nail Theories
           <span className="mt-1 block font-sans text-[10px] font-semibold uppercase tracking-[0.28em] text-ink/45 not-italic">
             {SITE_TAGLINE}
@@ -146,7 +102,7 @@ const Navbar = () => {
           {['Home', 'Services', 'Portfolio', 'Blog', 'Contact'].map((item) => (
             <a 
               key={item} 
-              href={`#${item.toLowerCase()}`}
+              href={`/${item === 'Home' ? '' : `#${item.toLowerCase()}`}`}
               className="text-xs uppercase tracking-[0.2em] font-semibold text-ink/60 hover:text-primary transition-colors"
             >
               {item}
@@ -155,7 +111,7 @@ const Navbar = () => {
         </div>
 
         <a
-          href="#contact"
+          href="/#contact"
           className="gradient-cta text-white px-6 py-2.5 rounded-lg font-bold text-sm tracking-wide shadow-lg shadow-primary/20 active:scale-95 transition-all inline-block text-center"
         >
           จองคิว
@@ -191,13 +147,13 @@ const Hero = () => {
           </p>
           <div className="flex flex-wrap gap-4">
             <a
-              href="#contact"
+              href="/#contact"
               className="gradient-cta text-white px-8 py-4 rounded font-bold uppercase tracking-widest text-sm shadow-xl shadow-primary/10 hover:scale-105 transition-transform inline-block text-center"
             >
               จองคิวเลย
             </a>
             <a
-              href="#portfolio"
+              href="/#portfolio"
               className="text-primary px-8 py-4 rounded font-bold uppercase tracking-widest text-sm hover:bg-surface-high transition-colors inline-block text-center border border-primary/15"
             >
               ดูผลงาน
@@ -347,7 +303,7 @@ const Services = () => {
               ครอบคลุมงานที่คนค้นหาจากร้านทำเล็บอุดรและร้านทำเล็บอุดรธานี — จัดเต็มตั้งแต่โทนมินิมอลไปจนถึงลายพิเศษ
             </p>
           </div>
-          <a href="#contact" className="text-primary font-bold uppercase tracking-widest text-[10px] border-b border-primary/20 pb-1 hover:border-primary transition-all">
+          <a href="/#contact" className="text-primary font-bold uppercase tracking-widest text-[10px] border-b border-primary/20 pb-1 hover:border-primary transition-all">
             นัดคิว / สอบถาม
           </a>
         </div>
@@ -624,12 +580,12 @@ const FAQ = () => {
   );
 };
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer className="bg-surface-high pt-24 pb-12 px-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
         <div className="md:col-span-2">
-          <a href="#" className="text-2xl font-serif italic font-bold text-primary mb-2 block">Nail Theories</a>
+          <a href="/" className="text-2xl font-serif italic font-bold text-primary mb-2 block">Nail Theories</a>
           <p className="mb-6 text-[10px] font-semibold uppercase tracking-[0.25em] text-ink/45">{SITE_TAGLINE}</p>
           <p className="text-ink/60 max-w-sm mb-8 leading-relaxed">
             ร้านทำเล็บอุดรธานีแบบ Home Studio Nail Labs — เน้นเล็บเจลอุดร ต่อเล็บอุดร เพ้นท์เล็บอุดร และโทนร้านทำเล็บมินิมอลอุดรที่สะอาดและละเอียด
@@ -668,9 +624,10 @@ const Footer = () => {
         <div>
           <h4 className="font-bold text-xs uppercase tracking-widest mb-6">Navigation</h4>
           <ul className="space-y-4 text-sm text-ink/60">
-            <li><a href="#" className="hover:text-primary transition-colors">Services</a></li>
-            <li><a href="#" className="hover:text-primary transition-colors">Portfolio</a></li>
-            <li><a href="#" className="hover:text-primary transition-colors font-bold text-primary underline underline-offset-4">Booking</a></li>
+            <li><a href="/#services" className="hover:text-primary transition-colors">Services</a></li>
+            <li><a href="/#portfolio" className="hover:text-primary transition-colors">Portfolio</a></li>
+            <li><a href="/#blog" className="hover:text-primary transition-colors">Blog</a></li>
+            <li><a href="/#contact" className="hover:text-primary transition-colors font-bold text-primary underline underline-offset-4">Booking</a></li>
             <li><a href="#" className="hover:text-primary transition-colors">Privacy Policy</a></li>
           </ul>
         </div>
@@ -710,22 +667,22 @@ const Footer = () => {
   );
 };
 
-const MobileNav = () => {
+export const MobileNav = () => {
   return (
     <nav className="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-8 pt-4 md:hidden glass-nav z-50 rounded-t-[32px] shadow-2xl border-t border-ink/5">
-      <a href="#" className="flex flex-col items-center gap-1 text-primary">
+      <a href="/" className="flex flex-col items-center gap-1 text-primary">
         <Home className="w-5 h-5" />
         <span className="text-[9px] uppercase tracking-widest font-bold">Home</span>
       </a>
-      <a href="#portfolio" className="flex flex-col items-center gap-1 text-ink/40">
+      <a href="/#portfolio" className="flex flex-col items-center gap-1 text-ink/40">
         <Grid className="w-5 h-5" />
         <span className="text-[9px] uppercase tracking-widest font-bold">Portfolio</span>
       </a>
-      <a href="#services" className="flex flex-col items-center gap-1 text-ink/40">
+      <a href="/#services" className="flex flex-col items-center gap-1 text-ink/40">
         <Scissors className="w-5 h-5" />
         <span className="text-[9px] uppercase tracking-widest font-bold">Services</span>
       </a>
-      <a href="#contact" className="flex flex-col items-center gap-1 text-ink/40">
+      <a href="/#contact" className="flex flex-col items-center gap-1 text-ink/40">
         <Calendar className="w-5 h-5" />
         <span className="text-[9px] uppercase tracking-widest font-bold">Booking</span>
       </a>
@@ -776,6 +733,65 @@ export default function App() {
 
         <Services />
         <Portfolio />
+
+        <section id="blog" className="scroll-mt-24 bg-surface-high py-32 px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="font-serif text-3xl text-ink md:text-4xl">Blog · Nail Theories</h2>
+            <p className="mt-4 text-sm leading-relaxed text-ink/55">
+              บทความเกี่ยวกับทำเล็บอุดรธานี เล็บเจล และไอเดียลายเล็บ
+            </p>
+          </div>
+          <div className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-10 md:grid-cols-2">
+            <Link
+              to="/blog/nail-salon-udon-thani"
+              className="group block overflow-hidden rounded-[40px] border border-ink/5 bg-surface shadow-xl transition hover:border-primary/20 hover:shadow-2xl"
+            >
+              <div className="aspect-[16/10] w-full overflow-hidden bg-surface-low">
+                <img
+                  src="/images/portfolio/S__3022860.jpg"
+                  alt=""
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                />
+              </div>
+              <div className="p-8 text-left">
+                <h3 className="font-serif text-xl leading-snug text-ink md:text-2xl">
+                  ร้านเล็บอุดรธานี แนะนำ | ทำเล็บเจล ต่อเล็บ ลายสวย โดย Nail Theories
+                </h3>
+                <p className="mt-4 line-clamp-3 text-sm leading-relaxed text-ink/60">
+                  กำลังมองหาร้านเล็บอุดรธานีอยู่ใช่ไหม? Nail Theories ให้บริการทำเล็บเจล ต่อเล็บ เพ้นท์เล็บ และออกแบบลายเล็บสวย ๆ แบบใส่ใจรายละเอียด พร้อมดูแลทุกขั้นตอน
+                </p>
+                <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-widest text-primary">
+                  อ่านต่อ
+                </span>
+              </div>
+            </Link>
+            <Link
+              to="/blog/best-nail-salon-udon-thani"
+              className="group block overflow-hidden rounded-[40px] border border-ink/5 bg-surface shadow-xl transition hover:border-primary/20 hover:shadow-2xl"
+            >
+              <div className="aspect-[16/10] w-full overflow-hidden bg-surface-low">
+                <img
+                  src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=80"
+                  alt=""
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="p-8 text-left">
+                <h3 className="font-serif text-xl leading-snug text-ink md:text-2xl">
+                  ร้านเล็บอุดรธานี แนะนำ เลือกยังไงให้ได้งานสวย คุ้ม และตรงสไตล์
+                </h3>
+                <p className="mt-4 line-clamp-3 text-sm leading-relaxed text-ink/60">
+                  วิธีเลือกร้านทำเล็บที่ดี สิ่งที่ควรดูก่อนตัดสินใจทำเล็บเจล ต่อเล็บ และ Nail Art ให้ได้งานสวย คุ้ม และตรงสไตล์
+                </p>
+                <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-widest text-primary">
+                  อ่านต่อ
+                </span>
+              </div>
+            </Link>
+          </div>
+        </section>
 
         {/* Why Choose Us */}
         <section className="py-32 px-8">
