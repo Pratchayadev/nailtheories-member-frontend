@@ -169,12 +169,15 @@ const Hero = () => {
         >
           <div className="absolute inset-0 bg-primary/10 rounded-full blur-3xl -z-10 animate-pulse"></div>
           <div className="relative overflow-hidden rounded-3xl border border-ink/5 bg-surface-low shadow-2xl aspect-[16/10] max-h-[min(520px,55vh)] w-full">
-            <img 
-              alt="Nail Theories ร้านทำเล็บอุดรธานี Home Studio Nail Labs — แบนเนอร์แบรนด์" 
-              className="h-full w-full object-contain object-center transition-transform duration-700 hover:scale-[1.01]" 
-              src="/images/hero-nail-theories.png"
-              decoding="async"
-              fetchPriority="high"
+            <video
+              className="h-full w-full object-cover object-center"
+              src="/video/797235338.326415.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              aria-label="Nail Theories ร้านทำเล็บอุดรธานี Home Studio Nail Labs — แบนเนอร์แบรนด์"
             />
           </div>
           <div className="absolute -bottom-4 left-0 md:-bottom-6 md:-left-4 bg-white p-5 md:p-6 rounded-2xl shadow-xl max-w-[220px] border border-surface-high">
@@ -215,7 +218,7 @@ const LocalSeoSection = () => (
             หลายคนพิมพ์ <strong className="font-semibold text-ink/80">ร้านทำเล็บใกล้ฉัน</strong> เพื่อให้ระบบดึงผลจากตำแหน่งปัจจุบัน
             นอกจากนี้ยังมีคนค้นหา <strong className="font-semibold text-ink/80">ทำเล็บเจล อุดร</strong> โดยตรง
             หรือระบุย่าน เช่น <strong className="font-semibold text-ink/80">ร้านทำเล็บแถวห้าแยกน้ำพุ</strong> <strong className="font-semibold text-ink/80">ร้านทำเล็บแถวยูดีทาวน์</strong> และ{' '}
-            <strong className="font-semibold text-ink/80">ร้านทำเล็บหน้าเซ็นทรัลอุดร</strong> — Nail Theories ตั้งอยู่ใกล้จุดเดินทางหลักในเมือง สอบถามพิกัดและเวลาเปิด-ปิดได้ก่อนมาค่ะ
+            <strong className="font-semibold text-ink/80">ร้านทำเล็บใกล้เซ็นทรัลอุดรเซ็นทรัลอุดรอุดร</strong> — Nail Theories ตั้งอยู่ใกล้จุดเดินทางหลักในเมือง สอบถามพิกัดและเวลาเปิด-ปิดได้ก่อนมาค่ะ
           </p>
         </div>
 
@@ -540,7 +543,7 @@ const FAQ = () => {
     },
     {
       q: "ขอพิกัดร้านทำเล็บอุดรและที่จอดรถ?",
-      a: "ติดต่อขอพิกัดล่าสุดและแผนที่ได้ทางโทรหรือโซเชียลค่ะ — เหมาะกับคนที่ค้นหา “พิกัดร้านทำเล็บอุดร” บน TikTok หรือ Lemon8 เราอยู่ใกล้แหล่งท่องเที่ยวในเมือง เดินทางจากยูดีทาวน์หรือเซ็นทรัลอุดรได้สะดวก (แล้วแต่เส้นทาง) กรุณาสอบถามที่จอดก่อนมาค่ะ"
+      a: "ติดต่อขอพิกัดล่าสุดและแผนที่ได้ทางโทรหรือโซเชียลค่ะ — เหมาะกับคนที่ค้นหา “พิกัดร้านทำเล็บอุดร” บน TikTok หรือ Lemon8 เราอยู่ใกล้แหล่งท่องเที่ยวในเมือง เดินทางจากยูดีทาวน์หรือใกล้เซ็นทรัลอุดรอุดรได้สะดวก (แล้วแต่เส้นทาง) กรุณาสอบถามที่จอดก่อนมาค่ะ"
     }
   ];
 

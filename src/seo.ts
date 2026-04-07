@@ -13,7 +13,6 @@ export const SEO_KEYWORDS_LOCAL = [
   'ทำเล็บเจล อุดร',
   'ร้านทำเล็บแถวห้าแยกน้ำพุ',
   'ร้านทำเล็บแถวยูดีทาวน์',
-  'ร้านทำเล็บหน้าเซ็นทรัลอุดร',
 ] as const;
 
 /** 2. Service-specific — ความสะดวก / สตูดิโอ / จองออนไลน์ */
@@ -63,14 +62,14 @@ export const SITE_TAGLINE = 'Home Studio Nail Labs';
 export const SITE_URL = 'https://www.nail-theories.com';
 
 /** รูป OG / แชร์โซเชียล (ไฟล์ใน public/) */
-export const OG_IMAGE_PATH = '/images/hero-nail-theories.png';
+export const OG_IMAGE_PATH = 'ใกล้เซ็นทรัลอุดร';
 
 export function getOgImageAbsoluteUrl(): string {
   return `${SITE_URL}${OG_IMAGE_PATH}`;
 }
 
 export const DEFAULT_META_DESCRIPTION =
-  'ทำเล็บอุดร ร้านทำเล็บอุดรธานี Nail Theories — Home Studio / Private Nail Studio อุดร ทำเล็บเจล อุดร จองคิวทำเล็บออนไลน์ ร้านทำเล็บใกล้ฉัน แถวยูดีทาวน์ ห้าแยกน้ำพุ เซ็นทรัลอุดร';
+  'ทำเล็บอุดร ร้านทำเล็บอุดรธานี Nail Theories — Home Studio / Private Nail Studio อุดร ทำเล็บเจล อุดร จองคิวทำเล็บออนไลน์ ร้านทำเล็บใกล้ฉัน แถวยูดีทาวน์ ห้าแยกน้ำพุ ใกล้เซ็นทรัลอุดรเซ็นทรัลอุดรอุดรอุดร';
 
 /** Official contact & social (single source of truth for UI + future CMS). */
 export const CONTACT = {
