@@ -41,6 +41,11 @@ const ARTICLES: Record<string, ArticleConfig> = {
     bodyStartMarker: 'ร้านเล็บอุดรธานี แนะนำ เลือกยังไงให้ได้งานสวย คุ้ม และตรงสไตล์',
     imageInjection: { type: 'stock', count: 2 },
   },
+  'nail-extension-udon-thani': {
+    path: '/article/nail-extension-udon-thani.md',
+    bodyStartMarker: 'ต่อเล็บอุดรธานี แบบไหนดี? วิธีเลือกทรงเล็บ ความยาว และร้านที่เหมาะกับคุณ',
+    imageInjection: { type: 'stock', count: 2 },
+  },
 };
 
 export function getArticlePath(slug: string): string | null {

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Menu, 
@@ -42,6 +42,7 @@ import {
   SITE_TAGLINE,
 } from './seo';
 import { useDocumentMeta } from './useDocumentMeta';
+import { NAIL_SALON_STOCK_IMAGES } from './lib/articleStockImages';
 
 function TikTokIcon({ className }: { className?: string }) {
   return (
@@ -697,6 +698,10 @@ export const MobileNav = () => {
 
 export default function App() {
   useDocumentMeta();
+  const randomCover = useMemo(() => {
+    const idx = Math.floor(Math.random() * NAIL_SALON_STOCK_IMAGES.length);
+    return NAIL_SALON_STOCK_IMAGES[idx];
+  }, []);
 
   return (
     <div className="min-h-screen selection:bg-primary/10 selection:text-primary">
@@ -787,6 +792,31 @@ export default function App() {
                 </h3>
                 <p className="mt-4 line-clamp-3 text-sm leading-relaxed text-ink/60">
                   วิธีเลือกร้านทำเล็บที่ดี สิ่งที่ควรดูก่อนตัดสินใจทำเล็บเจล ต่อเล็บ และ Nail Art ให้ได้งานสวย คุ้ม และตรงสไตล์
+                </p>
+                <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-widest text-primary">
+                  อ่านต่อ
+                </span>
+              </div>
+            </Link>
+            <Link
+              to="/blog/nail-extension-udon-thani"
+              className="group block overflow-hidden rounded-[40px] border border-ink/5 bg-surface shadow-xl transition hover:border-primary/20 hover:shadow-2xl"
+            >
+              <div className="aspect-[16/10] w-full overflow-hidden bg-surface-low">
+                <img
+                  src={randomCover.src}
+                  alt={randomCover.alt}
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="p-8 text-left">
+                <h3 className="font-serif text-xl leading-snug text-ink md:text-2xl">
+                  ต่อเล็บอุดรธานี แบบไหนดี? วิธีเลือกทรงเล็บ ความยาว และร้านที่เหมาะกับคุณ
+                </h3>
+                <p className="mt-4 line-clamp-3 text-sm leading-relaxed text-ink/60">
+                  รวมวิธีเลือกทรงเล็บ ความยาว และสไตล์ต่อเล็บให้เข้ากับรูปมือและการใช้งานจริง พร้อมเช็กลิสต์เลือกร้านต่อเล็บอุดรธานีก่อนจอง
                 </p>
                 <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-widest text-primary">
                   อ่านต่อ
