@@ -46,6 +46,16 @@ const ARTICLES: Record<string, ArticleConfig> = {
     bodyStartMarker: 'ต่อเล็บอุดรธานี แบบไหนดี? วิธีเลือกทรงเล็บ ความยาว และร้านที่เหมาะกับคุณ',
     imageInjection: { type: 'stock', count: 2 },
   },
+  'gel-nails-udon-thani-how-long': {
+    path: '/article/gel-nails-udon-thani-how-long.md',
+    bodyStartMarker: 'ทำเล็บเจลอุดรธานี อยู่ได้นานแค่ไหน และดูแลอย่างไรไม่ให้หลุดเร็ว',
+    imageInjection: { type: 'stock', count: 2 },
+  },
+  'gel-vs-acrylic-nail-extension': {
+    path: '/article/gel-vs-acrylic-nail-extension.md',
+    bodyStartMarker: 'ต่อเล็บเจลกับต่อเล็บแบบอื่นต่างกันยังไง แบบไหนเหมาะกับคุณ',
+    imageInjection: { type: 'stock', count: 2 },
+  },
 };
 
 export function getArticlePath(slug: string): string | null {

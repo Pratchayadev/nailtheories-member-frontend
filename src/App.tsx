@@ -62,19 +62,54 @@ type PortfolioItem = {
 
 const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
-    src: '/images/portfolio/S__3022860.jpg',
-    alt: 'ผลงานเล็บเจล Nail Theories ร้านทำเล็บอุดรธานี Home Studio Nail Labs',
+    src: '/images/portfolio/S__3112971.jpg',
+    alt: 'ผลงานเล็บเจลโทนมินิมอล Nail Theories อุดรธานี',
     title: 'เล็บเจล · มินิมอล',
   },
   {
-    src: '/images/portfolio/S__40558600.jpg',
-    alt: 'ผลงานทำเล็บอุดร เพ้นท์เล็บ ร้านเล็บเจลอุดรธานี',
+    src: '/images/portfolio/S__3088388.jpg',
+    alt: 'ผลงานเพ้นท์เล็บโทนสุภาพ ร้านทำเล็บอุดรธานี',
     title: 'เพ้นท์เล็บ / ลายสวย',
   },
   {
-    src: '/images/portfolio/port1.png',
-    alt: 'ผลงานต่อเล็บอุดร เล็บเจลอุดร ร้านทำเล็บมินิมอลอุดร',
+    src: '/images/portfolio/S__41156621.jpg',
+    alt: 'ผลงานต่อเล็บทรงสวย โทนนู้ด ดูเรียบหรู',
     title: 'ต่อเล็บ · โทนนู้ด',
+  },
+  {
+    src: '/images/portfolio/S__41467925.jpg',
+    alt: 'ผลงานเล็บเจลสีแฟชั่นจาก Nail Theories',
+    title: 'เล็บเจล · แฟชั่น',
+  },
+  {
+    src: '/images/portfolio/S__41156620.jpg',
+    alt: 'ผลงานเล็บสวยถ่ายรูปขึ้น ร้านเล็บอุดรธานี',
+    title: 'ลายเล็บ · ถ่ายรูปขึ้น',
+  },
+  {
+    src: '/images/portfolio/667670311_122101436906824840_442057314806477994_n.jpg',
+    alt: 'ผลงานเพ้นท์เล็บดีเทลละเอียด โทนพรีเมียม',
+    title: 'Nail Art · Premium',
+  },
+  {
+    src: '/images/portfolio/S__3104774.jpg',
+    alt: 'ผลงานเล็บเจลสะอาดตา ลุคใช้ได้ทุกวัน',
+    title: 'Everyday Gel',
+  },
+  {
+    src: '/images/portfolio/S__41041925.jpg',
+    alt: 'ผลงานเล็บเจลมินิมอลสไตล์เกาหลี',
+    title: 'Korean Minimal',
+  },
+  {
+    src: '/images/portfolio/671427758_122105826356824840_5345373039753780843_n.jpg',
+    alt: 'ผลงานต่อเล็บและเพ้นท์เล็บโทนหรูดูแพง',
+    title: 'Luxury Tone',
+  },
+  {
+    src: '/images/portfolio/667069231_122101436918824840_3568244456543192001_n.jpg',
+    alt: 'ผลงานลายเล็บดีไซน์เฉพาะตัวจากร้านทำเล็บอุดร',
+    title: 'Custom Design',
   },
 ];
 
@@ -817,6 +852,56 @@ export default function App() {
                 </h3>
                 <p className="mt-4 line-clamp-3 text-sm leading-relaxed text-ink/60">
                   รวมวิธีเลือกทรงเล็บ ความยาว และสไตล์ต่อเล็บให้เข้ากับรูปมือและการใช้งานจริง พร้อมเช็กลิสต์เลือกร้านต่อเล็บอุดรธานีก่อนจอง
+                </p>
+                <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-widest text-primary">
+                  อ่านต่อ
+                </span>
+              </div>
+            </Link>
+            <Link
+              to="/blog/gel-nails-udon-thani-how-long"
+              className="group block overflow-hidden rounded-[40px] border border-ink/5 bg-surface shadow-xl transition hover:border-primary/20 hover:shadow-2xl"
+            >
+              <div className="aspect-[16/10] w-full overflow-hidden bg-surface-low">
+                <img
+                  src={randomCover.src}
+                  alt={randomCover.alt}
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="p-8 text-left">
+                <h3 className="font-serif text-xl leading-snug text-ink md:text-2xl">
+                  ทำเล็บเจลอุดรธานี อยู่ได้นานแค่ไหน และดูแลอย่างไรไม่ให้หลุดเร็ว
+                </h3>
+                <p className="mt-4 line-clamp-3 text-sm leading-relaxed text-ink/60">
+                  คำตอบเรื่องอายุเล็บเจลแบบเข้าใจง่าย พร้อมสาเหตุที่ทำให้เล็บหลุดไว และวิธีดูแลหลังทำให้สวยทนนานขึ้น
+                </p>
+                <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-widest text-primary">
+                  อ่านต่อ
+                </span>
+              </div>
+            </Link>
+            <Link
+              to="/blog/gel-vs-acrylic-nail-extension"
+              className="group block overflow-hidden rounded-[40px] border border-ink/5 bg-surface shadow-xl transition hover:border-primary/20 hover:shadow-2xl"
+            >
+              <div className="aspect-[16/10] w-full overflow-hidden bg-surface-low">
+                <img
+                  src={randomCover.src}
+                  alt={randomCover.alt}
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="p-8 text-left">
+                <h3 className="font-serif text-xl leading-snug text-ink md:text-2xl">
+                  ต่อเล็บเจลกับต่อเล็บแบบอื่นต่างกันยังไง แบบไหนเหมาะกับคุณ
+                </h3>
+                <p className="mt-4 line-clamp-3 text-sm leading-relaxed text-ink/60">
+                  เปรียบเทียบต่อเล็บเจล อะคริลิก และ Polygel แบบเข้าใจง่าย พร้อมวิธีเลือกให้เหมาะกับไลฟ์สไตล์และการใช้งานจริง
                 </p>
                 <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-widest text-primary">
                   อ่านต่อ
