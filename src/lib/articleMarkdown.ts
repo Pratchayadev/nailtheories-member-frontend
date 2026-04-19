@@ -56,6 +56,11 @@ const ARTICLES: Record<string, ArticleConfig> = {
     bodyStartMarker: 'ต่อเล็บเจลกับต่อเล็บแบบอื่นต่างกันยังไง แบบไหนเหมาะกับคุณ',
     imageInjection: { type: 'stock', count: 2 },
   },
+  'minimal-nail-designs-udon-thani': {
+    path: '/article/2026-04-19-1.md',
+    bodyStartMarker: 'ลายเล็บมินิมอลยอดนิยม สำหรับคนที่อยากได้ลุคเรียบแต่ดูแพง',
+    imageInjection: { type: 'stock', count: 2 },
+  },
 };
 
 export function getArticlePath(slug: string): string | null {
@@ -120,7 +125,11 @@ function mapSeoHelperLines(line: string): string {
   if (t === 'FAQ สำหรับ SEO (แนะนำให้ใส่ท้ายบทความ)' || t === 'FAQ สำหรับ SEO') {
     return '## คำถามที่พบบ่อย';
   }
-  if (t === 'CTA ปิดการขาย (แนะนำให้ใส่ท้ายบทความ)' || t === 'CTA ปิดท้ายบทความ') {
+  if (
+    t === 'CTA ปิดการขาย (แนะนำให้ใส่ท้ายบทความ)' ||
+    t === 'CTA ปิดท้ายบทความ' ||
+    t === 'CTA ปิดการจอง'
+  ) {
     return '## จองคิว / ติดต่อ';
   }
   return line;

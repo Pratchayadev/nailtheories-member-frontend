@@ -908,6 +908,31 @@ export default function App() {
                 </span>
               </div>
             </Link>
+            <Link
+              to="/blog/minimal-nail-designs-udon-thani"
+              className="group block overflow-hidden rounded-[40px] border border-ink/5 bg-surface shadow-xl transition hover:border-primary/20 hover:shadow-2xl"
+            >
+              <div className="aspect-[16/10] w-full overflow-hidden bg-surface-low">
+                <img
+                  src={randomCover.src}
+                  alt={randomCover.alt}
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="p-8 text-left">
+                <h3 className="font-serif text-xl leading-snug text-ink md:text-2xl">
+                  ลายเล็บมินิมอลยอดนิยม สำหรับคนที่อยากได้ลุคเรียบแต่ดูแพง
+                </h3>
+                <p className="mt-4 line-clamp-3 text-sm leading-relaxed text-ink/60">
+                  ไอเดียลายมินิมอลที่ฮิต วิธีเลือกให้เข้ามือ และเคล็ดลับทำเล็บเจลอุดรธานีให้ดูแพงแบบเรียบ ๆ ใช้ได้ทุกวัน
+                </p>
+                <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-widest text-primary">
+                  อ่านต่อ
+                </span>
+              </div>
+            </Link>
           </div>
         </section>
 
