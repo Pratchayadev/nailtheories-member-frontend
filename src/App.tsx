@@ -938,6 +938,31 @@ export default function App() {
                 </span>
               </div>
             </Link>
+            <Link
+              to="/blog/gel-nails-damage-myth-udon-thani"
+              className="group block overflow-hidden rounded-[40px] border border-ink/5 bg-surface shadow-xl transition hover:border-primary/20 hover:shadow-2xl"
+            >
+              <div className="aspect-[16/10] w-full overflow-hidden bg-surface-low">
+                <img
+                  src={randomCover.src}
+                  alt={randomCover.alt}
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="p-8 text-left">
+                <h3 className="font-serif text-xl leading-snug text-ink md:text-2xl">
+                  ทำเล็บเจลบ่อย ๆ เล็บพังจริงไหม? วิธีดูแลให้เล็บแข็งแรงและปลอดภัย
+                </h3>
+                <p className="mt-4 line-clamp-3 text-sm leading-relaxed text-ink/60">
+                  ไขความเข้าใจผิดเรื่องเล็บเจลพัง พร้อมสาเหตุจริง วิธีถอดเจลที่ถูกต้อง และเช็กลิสต์ดูแลเล็บให้แข็งแรงในทุกครั้งที่ทำ
+                </p>
+                <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-widest text-primary">
+                  อ่านต่อ
+                </span>
+              </div>
+            </Link>
           </div>
         </section>
 

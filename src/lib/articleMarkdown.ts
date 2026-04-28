@@ -61,6 +61,11 @@ const ARTICLES: Record<string, ArticleConfig> = {
     bodyStartMarker: 'ลายเล็บมินิมอลยอดนิยม สำหรับคนที่อยากได้ลุคเรียบแต่ดูแพง',
     imageInjection: { type: 'stock', count: 2 },
   },
+  'gel-nails-damage-myth-udon-thani': {
+    path: '/article/2026-04-28.md',
+    bodyStartMarker: 'ทำเล็บเจลบ่อย ๆ เล็บพังจริงไหม? ไขความจริงก่อนตัดสินใจ',
+    imageInjection: { type: 'stock', count: 2 },
+  },
 };
 
 export function getArticlePath(slug: string): string | null {
