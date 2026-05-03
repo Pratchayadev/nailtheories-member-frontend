@@ -1,0 +1,5 @@
+# https://www.nail-theories.com/
+User-agent: *
+Allow: /
+
+Sitemap: https://www.nail-theories.com/sitemap.xml
