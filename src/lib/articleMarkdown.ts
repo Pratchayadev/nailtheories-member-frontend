@@ -66,6 +66,24 @@ const ARTICLES: Record<string, ArticleConfig> = {
     bodyStartMarker: 'ทำเล็บเจลบ่อย ๆ เล็บพังจริงไหม? ไขความจริงก่อนตัดสินใจ',
     imageInjection: { type: 'stock', count: 2 },
   },
+  'nail-salon-udon-thani-2026-lao': {
+    path: '/article/2026-05-04.md',
+    bodyStartMarker:
+      'ຮ້ານເລັບອຸດອນ ແນະນຳ 2026 ສຳລັບສາວໆ ທີ່ຢາກໄດ້ເລັບງາມ ສະອາດ ແລະ ເບິ່ງຫຼູ',
+    imageInjection: {
+      type: 'local',
+      images: [
+        {
+          src: '/images/portfolio/688751969_122110435202824840_1697816614393343360_n.jpg',
+          alt: 'ຜົນງານເລັບ — Nail Theories ອຸດຖະຣະທານີ',
+        },
+        {
+          src: '/images/portfolio/S__3022860.jpg',
+          alt: 'Nail Theories — nail salon portfolio',
+        },
+      ],
+    },
+  },
 };
 
 export function getArticlePath(slug: string): string | null {

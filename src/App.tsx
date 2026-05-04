@@ -116,6 +116,26 @@ const PORTFOLIO_ITEMS: PortfolioItem[] = [
     alt: 'ผลงานลายเล็บดีไซน์เฉพาะตัวจากร้านทำเล็บอุดร',
     title: 'Custom Design',
   },
+  {
+    src: '/images/portfolio/680268068_122109093122824840_4512842208102150257_n.jpg',
+    alt: 'ผลงานเล็บเจล Nail Theories อุดรธานี โทนสวยถ่ายรูปขึ้น',
+    title: 'Gel Set · Studio',
+  },
+  {
+    src: '/images/portfolio/682313159_122108633312824840_5625950483628252141_n.jpg',
+    alt: 'ผลงานทำเล็บเจลร้านทำเล็บอุดรธานี ลุคมินิมอล',
+    title: 'เล็บเจล · ลุคสะอาด',
+  },
+  {
+    src: '/images/portfolio/686514728_122110639436824840_6227134258007355409_n.jpg',
+    alt: 'ผลงานเพ้นท์เล็บและต่อเล็บจาก Nail Theories',
+    title: 'Nail Art · ลายสวย',
+  },
+  {
+    src: '/images/portfolio/688751969_122110435202824840_1697816614393343360_n.jpg',
+    alt: 'ผลงานเล็บเจลโทนนู้ด ร้านเล็บอุดรธานี',
+    title: 'นู้ด · เรียบหรู',
+  },
 ];
 
 // --- Components ---
@@ -960,6 +980,35 @@ export default function App() {
                 </p>
                 <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-widest text-primary">
                   อ่านต่อ
+                </span>
+              </div>
+            </Link>
+            <Link
+              to="/blog/nail-salon-udon-thani-2026-lao"
+              lang="lo"
+              className="group block overflow-hidden rounded-[40px] border border-ink/5 bg-surface shadow-xl transition hover:border-primary/20 hover:shadow-2xl"
+            >
+              <div className="aspect-[16/10] w-full overflow-hidden bg-surface-low">
+                <img
+                  src="/images/portfolio/688751969_122110435202824840_1697816614393343360_n.jpg"
+                  alt=""
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="p-8 text-left">
+                <p className="mb-2 text-[10px] font-bold uppercase tracking-widest text-ink/40">
+                  ພາສາລາວ · Blog
+                </p>
+                <h3 className="font-serif text-xl leading-snug text-ink md:text-2xl">
+                  ຮ້ານເລັບອຸດຖະຣະທານີ ປີ 2026 — ເທັນເລັບ ແລະ ວິທີເລືອກຮ້ານ
+                </h3>
+                <p className="mt-4 line-clamp-3 text-sm leading-relaxed text-ink/60">
+                  ເທັນມິນິມອນ ເລັບເຈວເກົາຫຼີ Cat Eye Chrome ຈຸດສັງເກດກ່ອນຈອງ ພ້ອມລິ້ງໄປບົດພາສາໄທທີ່ກ່ຽວຂ້ອງ
+                </p>
+                <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-widest text-primary">
+                  ອ່ານຕໍ່
                 </span>
               </div>
             </Link>

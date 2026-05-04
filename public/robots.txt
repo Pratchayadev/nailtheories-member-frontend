@@ -1,5 +1,8 @@
-# https://www.nail-theories.com/
+# Nail Theories — https://www.nail-theories.com/
+# Indexing: allow all user-agents to crawl public URLs (no duplicate/staging paths to block).
+
 User-agent: *
 Allow: /
 
+# Full sitemap URL (same origin as canonical site in src/seo.ts — SITE_URL)
 Sitemap: https://www.nail-theories.com/sitemap.xml
