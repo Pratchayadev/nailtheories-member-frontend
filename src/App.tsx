@@ -1012,6 +1012,131 @@ export default function App() {
                 </span>
               </div>
             </Link>
+            <Link
+              to="/blog/gel-nail-udon-2026-trend"
+              className="group block overflow-hidden rounded-[40px] border border-ink/5 bg-surface shadow-xl transition hover:border-primary/20 hover:shadow-2xl"
+            >
+              <div className="aspect-[16/10] w-full overflow-hidden bg-surface-low">
+                <img
+                  src={randomCover.src}
+                  alt={randomCover.alt}
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="p-8 text-left">
+                <h3 className="font-serif text-xl leading-snug text-ink md:text-2xl">
+                  ลายเล็บเจลอุดร 2026 ที่กำลังฮิต — Cat Eye, Chrome, Glazed Donut และมินิมอลสไตล์เกาหลี
+                </h3>
+                <p className="mt-4 line-clamp-3 text-sm leading-relaxed text-ink/60">
+                  รวมลายเล็บเจลที่ลูกค้าทำเล็บเจลอุดรขอมากที่สุดในปี 2026 พร้อมคำแนะนำเลือกลายให้เข้ากับรูปมือและไลฟ์สไตล์
+                </p>
+                <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-widest text-primary">
+                  อ่านต่อ
+                </span>
+              </div>
+            </Link>
+            <Link
+              to="/blog/nail-salon-udon-near-me-2026"
+              className="group block overflow-hidden rounded-[40px] border border-ink/5 bg-surface shadow-xl transition hover:border-primary/20 hover:shadow-2xl"
+            >
+              <div className="aspect-[16/10] w-full overflow-hidden bg-surface-low">
+                <img
+                  src={randomCover.src}
+                  alt={randomCover.alt}
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="p-8 text-left">
+                <h3 className="font-serif text-xl leading-snug text-ink md:text-2xl">
+                  ร้านทำเล็บอุดร 2026 — 6 จุดที่ต้องเช็กก่อนตัดสินใจจอง
+                </h3>
+                <p className="mt-4 line-clamp-3 text-sm leading-relaxed text-ink/60">
+                  วิธีเลือกร้านทำเล็บอุดรธานีให้ได้งานสวย ราคาคุ้ม และปลอดภัย พร้อม checklist 6 ข้อก่อนจองทุกครั้ง
+                </p>
+                <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-widest text-primary">
+                  อ่านต่อ
+                </span>
+              </div>
+            </Link>
+            <Link
+              to="/blog/gel-nails-udon-price-2026"
+              className="group block overflow-hidden rounded-[40px] border border-ink/5 bg-surface shadow-xl transition hover:border-primary/20 hover:shadow-2xl"
+            >
+              <div className="aspect-[16/10] w-full overflow-hidden bg-surface-low">
+                <img
+                  src={randomCover.src}
+                  alt={randomCover.alt}
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="p-8 text-left">
+                <h3 className="font-serif text-xl leading-snug text-ink md:text-2xl">
+                  ทำเล็บเจลอุดรธานีราคาเท่าไหร่ 2026 — เทียบราคาและคุณภาพที่ควรรู้
+                </h3>
+                <p className="mt-4 line-clamp-3 text-sm leading-relaxed text-ink/60">
+                  ราคามาตรฐานทำเล็บเจลอุดรธานีปี 2026 ตั้งแต่สีพื้น Cat Eye Chrome จนถึงต่อเล็บ พร้อมวิธีวัดว่าราคาที่จ่ายคุ้มค่าหรือเปล่า
+                </p>
+                <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-widest text-primary">
+                  อ่านต่อ
+                </span>
+              </div>
+            </Link>
+            <Link
+              to="/blog/nail-care-after-gel-udon"
+              className="group block overflow-hidden rounded-[40px] border border-ink/5 bg-surface shadow-xl transition hover:border-primary/20 hover:shadow-2xl"
+            >
+              <div className="aspect-[16/10] w-full overflow-hidden bg-surface-low">
+                <img
+                  src={randomCover.src}
+                  alt={randomCover.alt}
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="p-8 text-left">
+                <h3 className="font-serif text-xl leading-snug text-ink md:text-2xl">
+                  วิธีดูแลเล็บหลังทำเจลให้อยู่ทนนาน — คำแนะนำจากร้านทำเล็บอุดร
+                </h3>
+                <p className="mt-4 line-clamp-3 text-sm leading-relaxed text-ink/60">
+                  ทำเล็บเจลแล้วหลุดเร็วอยู่ไหม? รวม Routine ดูแลเล็บหลังทำ ทั้งสิ่งที่ควรทำและไม่ควรทำ เพื่อให้เล็บสวยอยู่ได้ 3–4 สัปดาห์
+                </p>
+                <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-widest text-primary">
+                  อ่านต่อ
+                </span>
+              </div>
+            </Link>
+            <Link
+              to="/blog/foot-nail-care-gel-udon"
+              className="group block overflow-hidden rounded-[40px] border border-ink/5 bg-surface shadow-xl transition hover:border-primary/20 hover:shadow-2xl"
+            >
+              <div className="aspect-[16/10] w-full overflow-hidden bg-surface-low">
+                <img
+                  src={randomCover.src}
+                  alt={randomCover.alt}
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="p-8 text-left">
+                <h3 className="font-serif text-xl leading-snug text-ink md:text-2xl">
+                  ทำเล็บมือเล็บเท้าพร้อมกัน — ดูแลเล็บเท้าเจลอุดรธานีให้สวยทนนาน
+                </h3>
+                <p className="mt-4 line-clamp-3 text-sm leading-relaxed text-ink/60">
+                  ข้อดีของเล็บเท้าเจลเทียบสีทา ลายที่ฮิตในปี 2026 และวิธีดูแลให้เล็บเท้าอยู่ได้ 4–6 สัปดาห์จากร้านทำเล็บเจลอุดรธานี
+                </p>
+                <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-widest text-primary">
+                  อ่านต่อ
+                </span>
+              </div>
+            </Link>
           </div>
         </section>
 

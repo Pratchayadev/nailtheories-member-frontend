@@ -84,6 +84,31 @@ const ARTICLES: Record<string, ArticleConfig> = {
       ],
     },
   },
+  'gel-nail-udon-2026-trend': {
+    path: '/article/2026-05-23-1.md',
+    bodyStartMarker: 'ลายเล็บเจลอุดร 2026 ที่กำลังฮิต — ไอเดียสวยสไตล์เกาหลีจากร้านทำเล็บเจลอุดรธานี',
+    imageInjection: { type: 'stock', count: 2 },
+  },
+  'nail-salon-udon-near-me-2026': {
+    path: '/article/2026-05-23-2.md',
+    bodyStartMarker: 'ร้านทำเล็บอุดร 2026 — วิธีเลือกร้านเล็บที่ดีในอุดรธานีก่อนตัดสินใจจอง',
+    imageInjection: { type: 'stock', count: 2 },
+  },
+  'gel-nails-udon-price-2026': {
+    path: '/article/2026-05-23-3.md',
+    bodyStartMarker: 'ทำเล็บเจลอุดรธานี ราคาเท่าไหร่ 2026 — เปรียบเทียบราคา บริการ และคุณภาพที่ควรรู้',
+    imageInjection: { type: 'stock', count: 2 },
+  },
+  'nail-care-after-gel-udon': {
+    path: '/article/2026-05-23-4.md',
+    bodyStartMarker: 'วิธีดูแลเล็บหลังทำเจล ให้อยู่ทนและไม่เสียไว — คำแนะนำจากร้านทำเล็บอุดรธานี',
+    imageInjection: { type: 'stock', count: 2 },
+  },
+  'foot-nail-care-gel-udon': {
+    path: '/article/2026-05-23-5.md',
+    bodyStartMarker: 'ทำเล็บมือเล็บเท้าพร้อมกันที่ร้านทำเล็บเจลอุดรธานี — ดูแลอย่างไรให้สวยทนนาน',
+    imageInjection: { type: 'stock', count: 2 },
+  },
 };
 
 export function getArticlePath(slug: string): string | null {
