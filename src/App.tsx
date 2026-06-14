@@ -136,6 +136,96 @@ const PORTFOLIO_ITEMS: PortfolioItem[] = [
     alt: 'ผลงานเล็บเจลโทนนู้ด ร้านเล็บอุดรธานี',
     title: 'นู้ด · เรียบหรู',
   },
+  {
+    src: '/images/portfolio/689484473_122111228798824840_7716648194242740490_n.jpg',
+    alt: 'ผลงานเล็บเจล Nail Theories อุดรธานี',
+    title: 'Gel · Fresh Set',
+  },
+  {
+    src: '/images/portfolio/689485759_122111550140824840_3155609159756995889_n.jpg',
+    alt: 'ผลงานทำเล็บเจลร้านทำเล็บอุดรธานี',
+    title: 'เล็บเจล · โทนสวย',
+  },
+  {
+    src: '/images/portfolio/696333083_122111799476824840_6538161652672773302_n.jpg',
+    alt: 'ผลงานต่อเล็บและเพ้นท์เล็บ Nail Theories',
+    title: 'Nail Art · Detail',
+  },
+  {
+    src: '/images/portfolio/701509718_122113080902824840_7000806449122835972_n.jpg',
+    alt: 'ผลงานเล็บเจลมินิมอล ร้านเล็บอุดรธานี',
+    title: 'Minimal Gel',
+  },
+  {
+    src: '/images/portfolio/701810341_122113602728824840_6597372395488356631_n.jpg',
+    alt: 'ผลงานเล็บสวยจากร้านทำเล็บอุดร',
+    title: 'Clean Finish',
+  },
+  {
+    src: '/images/portfolio/705122922_122113791434824840_8867773391382469720_n.jpg',
+    alt: 'ผลงานเพ้นท์เล็บโทนสุภาพ อุดรธานี',
+    title: 'เพ้นท์เล็บ · ลุคใส',
+  },
+  {
+    src: '/images/portfolio/705989008_122114646152824840_3384574965624113046_n.jpg',
+    alt: 'ผลงานเล็บเจลสไตล์เกาหลี Nail Theories',
+    title: 'K-Style Gel',
+  },
+  {
+    src: '/images/portfolio/709701098_122114812052824840_3579596069380782329_n.jpg',
+    alt: 'ผลงานเล็บเจลโทนอ่อน ร้านทำเล็บอุดรธานี',
+    title: 'Soft Tone',
+  },
+  {
+    src: '/images/portfolio/710849038_122114952248824840_2110639602749607580_n.jpg',
+    alt: 'ผลงานลายเล็บจาก Nail Theories อุดรธานี',
+    title: 'Custom Art',
+  },
+  {
+    src: '/images/portfolio/715830916_122116044794824840_6689901207034878446_n.jpg',
+    alt: 'ผลงานเล็บเจลถ่ายรูปขึ้น ร้านเล็บอุดร',
+    title: 'Photo Ready',
+  },
+  {
+    src: '/images/portfolio/718075757_122117252924824840_1263647599367028857_n.jpg',
+    alt: 'ผลงานต่อเล็บทรงสวย ร้านทำเล็บอุดรธานี',
+    title: 'Extension · Shape',
+  },
+  {
+    src: '/images/portfolio/721104964_122117187116824840_2207313506363096306_n.jpg',
+    alt: 'ผลงานเล็บเจลลุคเรียบหรู Nail Theories',
+    title: 'Quiet Luxury',
+  },
+  {
+    src: '/images/portfolio/723458485_122117187122824840_100443594195247931_n.jpg',
+    alt: 'ผลงานทำเล็บเจลอุดรธานี โทนนู้ด',
+    title: 'Nude Gel',
+  },
+  {
+    src: '/images/portfolio/723627180_122117187218824840_7472393298973168642_n.jpg',
+    alt: 'ผลงานเพ้นท์เล็บและเล็บเจล อุดรธานี',
+    title: 'Gel & Paint',
+  },
+  {
+    src: '/images/portfolio/723732051_122117187128824840_728896913899423885_n.jpg',
+    alt: 'ผลงานเล็บสวยจากร้านทำเล็บมินิมอลอุดร',
+    title: 'Studio Set',
+  },
+  {
+    src: '/images/portfolio/S__3022860.jpg',
+    alt: 'ผลงานเล็บเจล Nail Theories — ร้านทำเล็บอุดรธานี',
+    title: 'Signature Gel',
+  },
+  {
+    src: '/images/portfolio/S__40558600.jpg',
+    alt: 'ผลงานเพ้นท์เล็บร้านเล็บอุดรธานี',
+    title: 'Paint · Detail',
+  },
+  {
+    src: '/images/portfolio/port1.png',
+    alt: 'ผลงานเล็บจาก Nail Theories Home Studio',
+    title: 'Portfolio · Highlight',
+  },
 ];
 
 // --- Components ---
@@ -1131,6 +1221,56 @@ export default function App() {
                 </h3>
                 <p className="mt-4 line-clamp-3 text-sm leading-relaxed text-ink/60">
                   ข้อดีของเล็บเท้าเจลเทียบสีทา ลายที่ฮิตในปี 2026 และวิธีดูแลให้เล็บเท้าอยู่ได้ 4–6 สัปดาห์จากร้านทำเล็บเจลอุดรธานี
+                </p>
+                <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-widest text-primary">
+                  อ่านต่อ
+                </span>
+              </div>
+            </Link>
+            <Link
+              to="/blog/gel-nails-booking-udon-thani"
+              className="group block overflow-hidden rounded-[40px] border border-ink/5 bg-surface shadow-xl transition hover:border-primary/20 hover:shadow-2xl"
+            >
+              <div className="aspect-[16/10] w-full overflow-hidden bg-surface-low">
+                <img
+                  src="/images/portfolio/686514728_122110639436824840_6227134258007355409_n.jpg"
+                  alt=""
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="p-8 text-left">
+                <h3 className="font-serif text-xl leading-snug text-ink md:text-2xl">
+                  อยากเปลี่ยนลุค? เริ่มจากเล็บเจลอุดรธานี — จองคิว Nail Theories
+                </h3>
+                <p className="mt-4 line-clamp-3 text-sm leading-relaxed text-ink/60">
+                  มินิมอล แฟชั่น หรือลายเฉพาะตัว ส่งรูปปรึกษาฟรี คิวจำกัดต่อวัน — Home Studio ที่ใส่ใจทุกขั้นตอน
+                </p>
+                <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-widest text-primary">
+                  อ่านต่อ
+                </span>
+              </div>
+            </Link>
+            <Link
+              to="/blog/nail-theories-home-studio-udon"
+              className="group block overflow-hidden rounded-[40px] border border-ink/5 bg-surface shadow-xl transition hover:border-primary/20 hover:shadow-2xl"
+            >
+              <div className="aspect-[16/10] w-full overflow-hidden bg-surface-low">
+                <img
+                  src="/images/portfolio/S__41156621.jpg"
+                  alt=""
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="p-8 text-left">
+                <h3 className="font-serif text-xl leading-snug text-ink md:text-2xl">
+                  Nail Theories Home Studio — บรรยากาศอบอุ่น ทำเล็บเจลแบบส่วนตัว
+                </h3>
+                <p className="mt-4 line-clamp-3 text-sm leading-relaxed text-ink/60">
+                  สายละมุน เป็นกันเอง ใส่ใจสุขอนามัย ปรึกษาเล็บที่เหมาะกับไลฟ์สไตล์ — ประสบการณ์เหมือนทำเล็บบ้านเพื่อน
                 </p>
                 <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-widest text-primary">
                   อ่านต่อ

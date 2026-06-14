@@ -109,6 +109,24 @@ const ARTICLES: Record<string, ArticleConfig> = {
     bodyStartMarker: 'ทำเล็บมือเล็บเท้าพร้อมกันที่ร้านทำเล็บเจลอุดรธานี — ดูแลอย่างไรให้สวยทนนาน',
     imageInjection: { type: 'stock', count: 2 },
   },
+  'gel-nails-booking-udon-thani': {
+    path: '/article/2026-04-06-2.md',
+    bodyStartMarker: 'อยากเปลี่ยนลุคแบบง่าย ๆ เริ่มต้นที่ "เล็บ" ก่อนเลย!',
+    imageInjection: { type: 'stock', count: 2 },
+  },
+  'nail-theories-home-studio-udon': {
+    path: '/article/2026-06-14-1.md',
+    bodyStartMarker: 'เพราะมือของคุณคือความประทับใจแรกที่หลายคนมองเห็น',
+    imageInjection: {
+      type: 'local',
+      images: [
+        {
+          src: '/images/portfolio/S__41156621.jpg',
+          alt: 'Nail Theories Home Studio — ผลงานเล็บเจลอุดรธานี',
+        },
+      ],
+    },
+  },
 };
 
 export function getArticlePath(slug: string): string | null {
